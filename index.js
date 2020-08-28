@@ -1,10 +1,10 @@
 $("#js-shopping-list-form").on("submit", function(event){
-  const text = $("#shopping-list-entry").val();
-  $("#shopping-list").append($("<li>").append(text));
-  $("#shopping-list-entry").val("");
   event.preventDefault();
-}
+  const text = $("#shopping-list-entry").val();
+  $(".shopping-list").append($("<li>").append(text));
+  $("#shopping-list-entry").val("");
+})
 
-$("#shopping-list").on("", "<li>", function(){
-  $(this).remove();
+$('.container').on('click','.shopping-item-delete', function() {
+  $(this).remove(event.currectTarget);
 })
